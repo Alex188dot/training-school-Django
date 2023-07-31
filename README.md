@@ -11,7 +11,7 @@ By clicking on each of them they can see the details:
 <img width="2223" alt="Screenshot 2023-07-31 at 15 15 30" src="https://github.com/Alex188dot/training-school-Django/assets/117444853/7cedc2d0-d65a-41fb-b969-f487796c62f5">
 <img width="2220" alt="Screenshot 2023-07-31 at 15 15 40" src="https://github.com/Alex188dot/training-school-Django/assets/117444853/4abcfd8e-071a-42be-afd1-a48d09c50242">
 
-Finally, once they decide what course they want to attend, they can enroll by filling the form (made using with Forms):
+Finally, once they decide what course they want to attend, they can enroll by filling the form (made with Crispy Forms):
 
 <img width="2220" alt="Screenshot 2023-07-31 at 16 26 07" src="https://github.com/Alex188dot/training-school-Django/assets/117444853/ef135776-ffd7-4cb1-956b-c23c83be2cc9">
 

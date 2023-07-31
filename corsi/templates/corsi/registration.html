@@ -2,10 +2,12 @@
 {% block titolo_pagina %}Iscriviti a un corso{% endblock titolo_pagina %}
 {% load crispy_forms_tags %}
 {% block contenuto %}
+<div class="container" style="width: 60%;">
 <h1>Iscriviti a un corso</h1>
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form|crispy }}
     <button type="submit" class="btn btn-success">Invia</button>
 </form>
+</div>
 {% endblock contenuto %}

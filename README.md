@@ -1,4 +1,5 @@
-# training-school-Django
-This is a Traning School application built on Django
+# Training School App with Django
 
-Still a work in progress
+This is a Traning School application built using Django. 
+
+

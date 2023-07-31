@@ -13,6 +13,9 @@
       crossorigin="anonymous"
     />
     <style>
+      body {
+      margin: 0;
+      }
       .navbar-brand, .nav-link {
         margin-right: 3rem;
       }
@@ -81,6 +84,7 @@
     <script>
       const buttons = document.querySelectorAll("button");
       const cards = document.querySelectorAll(".card");
+      const cardContainer = document.querySelectorAll(".card-container");
 
       for (let button of buttons) {
         button.addEventListener("click", filterCards);

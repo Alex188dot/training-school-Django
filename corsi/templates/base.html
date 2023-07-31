@@ -1,10 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block titolo_pagina %}Corsi di Formazione{% endblock titolo_pagina %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% block titolo_pagina %}Corsi di Formazione{% endblock titolo_pagina %}
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <style>
       .card {
         margin-bottom: 1rem;
@@ -13,7 +20,7 @@
       p {
         margin-top: 2rem;
       }
-      h2 {       
+      h2 {
         margin-top: 2rem;
         margin-bottom: 1.6rem;
       }
@@ -26,33 +33,46 @@
     </style>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/">Scuola di <br> Formazione</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://127.0.0.1:8000/registrazioneAlunno">Registrati per un corso</a>
-              </li>
-              
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"
+          >Scuola di <br />
+          Formazione</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="http://127.0.0.1:8000/registrazioneAlunno"
+                >Registrati per un corso</a
+              >
+            </li>
+          </ul>
         </div>
-      </nav>
-      <div class="container">
+      </div>
+    </nav>
 
-        {% block contenuto %}{% endblock contenuto %}
-    </div>
+    {% block contenuto %}{% endblock contenuto %}
+
     <script>
       const buttons = document.querySelectorAll("button");
       const cards = document.querySelectorAll(".card");
-      
+
       for (let button of buttons) {
         button.addEventListener("click", filterCards);
       }
@@ -63,13 +83,16 @@
 
           if (category.innerText === buttonText) {
             card.style.display = "block";
-          }
-          else {
+          } else {
             card.style.display = "none";
           }
         }
       }
-    </script>      
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

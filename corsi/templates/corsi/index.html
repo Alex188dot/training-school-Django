@@ -2,13 +2,13 @@
 {% block titolo %}Corsi{% endblock titolo %}
 {% block titolo_pagina %}Scuola di Formazione{% endblock titolo_pagina %}
 {% block contenuto %}
-<div class="container-fluid" style="display: flex; justify-content: center">
+<div class="container-fluid mt-3" style="display: flex; justify-content: center">
 {% for corso in corsi %}
 <div class="card" style="width: 18rem; margin-right:3rem;">
   <div class="card-body">
     <h5 class="card-title">{{ corso.titolo }}</h5>
     <h6 class="card-subtitle mb-2 text-muted">{{ corso.prezzo }}€</h6>
-    <p class="card-text category">{{ corso.categoria }}</p>
+    <p class="card-text category all">{{ corso.categoria }}</p>
     <a href="{% url 'corso_singolo' corso.pk %}" class="btn-primary"
       >Più info</a
     >
@@ -17,10 +17,11 @@
 {% endfor %}
 </div>
 {% block Categoria %}
-<div class="container" style="width: 10rem; display: flex; justify-content: center; flex-direction: column;">
+<div class="container mt-3 text-center" style="width: 10rem; display: flex; justify-content: center; flex-direction: column;">
 <h4>Categorie:</h4>
 <button class="btn btn-primary" id="informatica-button">Informatica</button>
 <button class="btn btn-success" id="fotografia-button">Fotografia</button>
+<button class="btn btn-warning" id="all">All</button>
 </div>
 {% endblock Categoria %}
 {% endblock contenuto %}

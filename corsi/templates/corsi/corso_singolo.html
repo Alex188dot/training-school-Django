@@ -2,9 +2,11 @@
 {% block titolo %}{{ corso.titolo }}{% endblock titolo %}
 {% block titolo_pagina %}{{ corso.titolo }}{% endblock titolo_pagina %}
 {% block contenuto %}
+<div class="course mx-auto">
 <h2>{{ corso.titolo }}</h2>
 <img src="{{ corso.img.url }}" alt="{{ corso.titolo }}" />
 <p>Durata: {{ corso.durata_ore }} ore - Inizio: {{ corso.data_inizio }} </p>
 <p>Costo: {{ corso.prezzo }}€ - <b>Categoria:</b> {{corso.categoria}}</p>
 <p>{{ corso.contenuto }}</p>
+</div>
 {% endblock contenuto %}

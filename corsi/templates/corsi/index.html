@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 {% block titolo %}Corsi{% endblock titolo %}
-{% block titolo_pagina %}Scuola di Formazione{% endblock titolo_pagina %}
+{% block titolo_pagina %}🎓Scuola di Formazione{% endblock titolo_pagina %}
 {% block contenuto %}
-<div class="container-fluid mt-3" style="display: flex; justify-content: center">
+<div class="container mt-3" style="display: flex; justify-content: center; width: 70%">
+  <div class="row">
 {% for corso in corsi %}
-<div class="card" style="width: 18rem; margin-right:3rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{ corso.titolo }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{ corso.prezzo }}€</h6>
-    <p class="card-text category all">{{ corso.categoria }}</p>
-    <a href="{% url 'corso_singolo' corso.pk %}" class="btn-primary"
-      >Più info</a
-    >
-  </div>
-</div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="card" style="width: 18rem; margin-right:3rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ corso.titolo }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ corso.prezzo }}€</h6>
+          <p class="card-text category all">{{ corso.categoria }}</p>
+          <a href="{% url 'corso_singolo' corso.pk %}" class="btn-primary"
+            >Più info</a
+          >
+        </div>
+      </div>
+    </div>
 {% endfor %}
+  </div>
 </div>
 {% block Categoria %}
 <div class="container mt-3 text-center" style="width: 10rem; display: flex; justify-content: center; flex-direction: column;">
